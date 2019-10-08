@@ -1,4 +1,4 @@
-# Python-Coq theorem prover for the associativity of the meet operation
+# Meet-Associativity theorem prover
 
 Implements proof tree search to prove the associativity of the meet operation of lattices.
 
