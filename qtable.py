@@ -11,9 +11,10 @@ class QTable:
     def __repr__(self):
         s = ""
         for key, val in self.qtable.items():
-            s+=str(key)
+            s+=str(key)+"\n"
             s+="\t"
             s+=str(val)
+            s+="\n\n"
         return s
 
     def no_available_actions(self, state):
