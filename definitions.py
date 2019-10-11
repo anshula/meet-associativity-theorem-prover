@@ -1,3 +1,8 @@
+# -------------------------------------------------------------------------------
+# Poset and Lattice classes derived from https://github.com/jwiegley/coq-lattice
+# Based on paper by Daniel W. H. James and Ralf Hinze
+# -------------------------------------------------------------------------------
+
 class Poset:
     def to_coq():
         return """
