@@ -102,8 +102,8 @@ class Environment:
                 if  self.state.num_subgoals < old_num_subgoals:
                     reward += 10
                 # make reward smaller if number of subgoals increases
-                elif  self.state.num_subgoals > old_num_subgoals:
-                    reward -= 0
+                # elif  self.state.num_subgoals > old_num_subgoals:
+                #     reward -= 0
 
                 # if it's an already visited state, you can just undo it
                 # make reward smaller for getting us into a loop
