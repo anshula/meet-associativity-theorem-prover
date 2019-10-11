@@ -15,9 +15,18 @@ agent = Agent()
 
 print("""
 # --------------------------------
-# Proving the meet operation is associative...
+# Training...
 # --------------------------------
 """)
 
 env = Environment(meetIsAssociative)
 agent.train(env)
+
+print("""
+# --------------------------------
+# Evaluating...
+# --------------------------------
+""")
+
+env = Environment(meetIsAssociative)
+agent.evaluate(env)

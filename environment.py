@@ -84,7 +84,8 @@ class Environment:
 
         # if the action worked without error
         if "Error" not in response: 
-            reward = -10 # slight negative reward for taking a step
+            reward = 10 # slight positive reward for not producing an error
+
             # append to list of actions
             self.state = self.state.get_copy()
             self.state.append_action(action)
@@ -98,15 +99,18 @@ class Environment:
              
             else:
                 # make reward bigger if number of subgoals was reduced.
-                # make reward negative if number of subgoals increases
                 if  self.state.num_subgoals < old_num_subgoals:
                     reward += 10
+                # make reward smaller if number of subgoals increases
                 elif  self.state.num_subgoals > old_num_subgoals:
-                    reward -= 10
+                    reward -= 0
 
                 # if it's an already visited state, you can just undo it
+                # make reward smaller for getting us into a loop
                 if self.state.all_subgoals in self.state.visited_subgoals:
+                    reward = -20
                     to_undo = True
+
                 # add in this visited subgoal (so it will be popped in env.step)
                 self.state.visited_subgoals.append(self.state.all_subgoals )
 
