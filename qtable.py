@@ -36,10 +36,7 @@ class QTable:
                 return Undo()
             else: 
                 best_action = max(state.get_available_actions(), key=self.qtable[state].get)
-                if self.qtable[state][best_action] < 0: # if expected value of all actions are -1
-                    return Undo()
-                else:
-                    return best_action
+                return best_action
 
         return self.get_random_action(state)
 
