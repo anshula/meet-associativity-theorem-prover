@@ -51,7 +51,7 @@ class Agent:
         print("Proof generated:", env.state.past_actions)
 
     def evaluate(self, env):
-        self.train(env, epsilon=0, update_q_table=True) # only exploit, not explore
+        self.train(env, epsilon=0, update_q_table=False) # only exploit, not explore
 
     def apply_antisymmetry(self):
         pass
