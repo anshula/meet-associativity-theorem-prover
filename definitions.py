@@ -61,7 +61,7 @@ class LatticeLemmas:
               reflexivity.
             Qed.
 
-            Lemma join_is_gb : forall a b : A, a ≤ a ⊔ b  /\ b ≤ a ⊔ b.
+            Lemma join_is_ub : forall a b : A, a ≤ a ⊔ b  /\ b ≤ a ⊔ b.
             Proof.
               intros.
               apply join_is_sup.

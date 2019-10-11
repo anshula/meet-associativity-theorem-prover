@@ -29,7 +29,7 @@ class ApplyMeetIsLowerBound(Action):
 
 class ApplyJoinIsUpperBound(Action):
     def __init__(self):
-        self.coq_str = "apply join_is_gb."
+        self.coq_str = "apply join_is_ub."
 
 class Reflexivity(Action):
     def __init__(self):
